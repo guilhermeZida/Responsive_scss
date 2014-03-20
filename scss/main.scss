@@ -1,0 +1,225 @@
+$margin: 0 auto;
+$widthDesk: 940px;
+$maxWidth: 100%;
+
+@mixin circle($width){
+	width: $width;
+	height: $width;
+		-webkit-border-radius: $width/2;
+		-moz-border-radius: $width/2;
+		border-radius: $width/2;
+}
+
+html,body{
+	 
+	width: 100%;
+	height: 100%;
+
+	font-size: 1em;
+	:before , :after {
+		content: '';
+		display: table;
+	}
+}
+
+%clear{clear: both;}
+
+body{
+	overflow-x:hidden;
+	:after{
+		@extend %clear; 
+	}
+}
+
+header,
+.main,
+footer{
+	float: left;
+	width: $maxWidth;
+}
+
+*,:before, :after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+//basic conifg
+
+a,input{
+    &:hover,
+    &:active,
+    &:focus{
+        outline: 0 none;}
+    }
+
+
+nav{float: left;
+	li{list-style:none;
+		a{text-decoration:none;}
+	}
+}
+
+// css3 animation
+
+.center{-webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+	margin:$margin;
+	width: $widthDesk;}
+
+// clear css3 animations
+
+.off{
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    transition: none;
+}
+
+// User configuration
+
+header{
+	h1{font-size: 2.5em;}
+}
+
+// share
+
+.share{
+    margin: 20px 0;
+    width: 100%;
+    display: inline-block;
+    clear: both;
+
+    .fb{
+        float: left;
+        margin: 2px 50px 0 0;
+    }
+
+    .tw{
+        float: left;
+        margin: 1px 0 0 0;
+    }
+
+    .gp{
+        float: left;
+    }
+}
+
+
+
+.slider{
+	margin:20px auto;
+	overflow:hidden;
+	width:100%;
+	height:400px;
+	background-color:#221f1f;
+
+	.slider-wrap{
+		height:inherit; overflow: hidden;
+	}
+
+	.box{
+		margin:0 auto 0; width:100%; height:400px;
+	}
+
+	nav.dots {position:absolute; width:100%; margin-top: -40px;
+		ul {text-align: center; list-style: none; margin: 0; padding: 0;}
+		li{display: inline-block; width: 10px; height: 10px; border-radius: 10px; background: #565656; margin: 0 2px;cursor: pointer;
+			&.on{background-color:white;}
+			&.arrows {position:absolute; width:100%; margin-top: -40px}
+		}
+	}
+}
+
+
+// image crop
+
+.media-crop{
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2 url(../img/loading.gif) center center no-repeat;
+    overflow: hidden;
+
+    .crop{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.circle{
+	@include circle(300px); display: block;
+}
+
+// fitvids
+
+.fit-video{
+    width: 100%;
+    margin: 20px auto;
+}
+
+
+// Responsive property
+
+// 15 columns
+
+@media (min-width: 1250px){
+    .center{
+        width: 1180px;
+    }
+}
+
+// 12 columns
+
+@media all and (max-width: 1249px){
+    .center{
+        width: $widthDesk;
+    }
+}
+
+// 9 columns
+
+@media (max-width: 999px){
+    .center{
+        width: 700px;
+    }
+    .circle{@include circle(200px); display: block;}
+}
+
+// 6 columns
+
+@media (max-width: 769px){
+    .center{
+        width: 460px;
+    }
+    .slider{height: 280px;
+    	h1{font-size: 1.3em;}
+    }
+    .share{display: none;}
+}
+
+// 4 columns
+
+@media (max-width: 479px){
+    .center{
+        width: 300px;
+    }
+     .slider{height: 250px;
+     	h1{font-size: 1em;}
+     }
+    .share{display: none;}
+}
+
+
