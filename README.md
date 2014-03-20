@@ -1,5 +1,5 @@
 #Responsive_scss-master
-Inspired by [Guilherme Pangnotta][1] a simpler way
+Inspired by [Guilherme Pangnotta][1] a simple way ;)
 #Plugins
 
 - [Normalize.css][2] - A modern, HTML5-ready alternative to CSS resets.
