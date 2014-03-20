@@ -3,7 +3,6 @@ Inspired by [Guilherme Pangnotta][1] a simpler way
 #Plugins
 
 [Normalize.css][2] - A modern, HTML5-ready alternative to CSS resets.
-
 [jQuery][3] - A fast, small, and feature-rich JavaScript library.
 [jQuery Easing][4] - A jQuery plugin to give advanced easing options.
 [FitVids][5] - A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
