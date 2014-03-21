@@ -62,6 +62,13 @@ nav{float: left;
 	}
 }
 
+section{padding: 1%;
+	article{font-size: 1.2em;
+		&.main{width:round(percentage(700px / 1180px)); float: left;}
+		&.second{width:round(percentage(450px / 1180px)); float: right;}
+	}
+}
+
 // css3 animation
 
 .center{-webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -208,6 +215,13 @@ header{
     	h1{font-size: 1.3em;}
     }
     .share{display: none;}
+
+    section{
+    	article{clear: both;
+    		&.main,
+    		&.second{float: none;width:percentage(460px / 460px); margin-bottom: 20%;}
+    	}
+    }
 }
 
 // 4 columns
@@ -220,6 +234,13 @@ header{
      	h1{font-size: 1em;}
      }
     .share{display: none;}
+
+    section{
+    	article{clear: both;
+    		&.main,
+    		&.second{float: none;width:percentage(280px / 300px); margin-bottom: 20%;}
+    	}
+    }
 }
 
 
