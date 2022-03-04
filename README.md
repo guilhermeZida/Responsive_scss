@@ -1,5 +1,5 @@
 #Responsive_scss-master
-Inspired by [Guilherme Pangnotta][1] a simple way ;)
+ simple way ;)
 
 #Version 1.02
 
